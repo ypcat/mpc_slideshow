@@ -13,8 +13,7 @@ import traceback
 addr = "localhost"
 port = "13579"
 playtime_range = (20, 30) # (min, max) in seconds
-#search_path = [u"C:\\bt", u"E:\\bt", u"E:\\video\\av"]
-search_path=[u'E:\\video\\av\\nanase_fuuka\\']
+search_path = [u"C:\\path1", u"D:\\path2"]
 file_types = [u"avi", u"wmv", u"mkv"]
 smaller_window = True
 always_ontop = True
