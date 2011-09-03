@@ -13,7 +13,8 @@ import traceback
 addr = "localhost"
 port = "13579"
 playtime_range = (20, 30) # (min, max) in seconds
-search_path = [u"C:\\bt", u"E:\\bt", u"E:\\video\\av"]
+#search_path = [u"C:\\bt", u"E:\\bt", u"E:\\video\\av"]
+search_path=[u'E:\\video\\av\\nanase_fuuka\\']
 file_types = [u"avi", u"wmv", u"mkv"]
 smaller_window = True
 always_ontop = True
@@ -25,7 +26,7 @@ def mpc_ontop():
     mpc_post("command.html?wm_command=884")
 
 def mpc_open(mov):
-    mpc_post("browser.html?path=%s" % mov)
+    mpc_post("browser.html?path=%s" % urllib.quote(mov.encode("utf8")))
 
 def mpc_zoom_50():
     mpc_post("command.html?wm_command=832")
